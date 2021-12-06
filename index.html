@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>长恨歌</title>
+    <style type="text/css">
+      /* 公用样式 */
+      html,body{
+        width:100%;
+      	height:100%;
+      	margin:0px;
+      	overflow:hidden;
+      }
+      /* 图片列表 */
+      .image_list{
+        text-align:center;
+      	margin-top:5%;
+      }
+      .image_list img{
+        width:500px;
+      	opacity:0.7;
+      }
+      .image_list img:hover{
+      	opacity:1;
+      }
+      /* 大背景 */
+      #bg{
+      	position:absolute;
+      	top:0px;
+      	left:0px;
+      	background-color:#E1FFFF;
+        width:100%;
+      	height:100%;
+      	background-repeat:no-repeat;
+      	background-position:center;
+      	background-size:80% auto;
+      	display:none;
+      }
+      /* 关闭按扭 */
+      .close_btn{
+        position:absolute;
+      	top:30px;
+      	right:30px;
+      	cursor:pointer;
+      	display:none;
+      }
+	  .i1{
+		  margin-left: 700px;
+	  }
+		  
+    </style>
+    <script type="text/javascript">
+      function showImage(id){
+        //背景层图片
+        document.getElementById("bg").style.backgroundImage = "url('res/ss"+id+".png')";
+        //显示lv色背景层
+        document.getElementById("bg").style.display = "block";
+        //显示关闭按扭
+        document.getElementsByClassName("close_btn")[0].style.display = "block";
+      }
+      function closeImage(){
+    	  //隐藏绿色背景
+    	  document.getElementById("bg").style.display = "none";
+
+    	  document.getElementsByClassName("close_btn")[0].style.display = "none";
+      }
+    </script>
+  </head>
+  <body>
+    
+
+    <div class="image_list">
+      <img src="res/ss1.png" title="点击查看主旨赏析" onclick="showImage(1)" />
+      <img src="res/ss2.png" title="点击查看字词释义" onclick="showImage(2)" /><br/>
+      <img src="res/ss3.png" title="点击查看诗句翻译" onclick="showImage(3)" />
+      <img src="res/ss4.png" title="点击查看创作背景" onclick="showImage(4)" />
+    </div>
+    <div class="i1">
+    	<a href="https://camellia1210.github.io/exe999/ "><img src="res/i.png" width="150" height="75"/></a></div>
+    <div id="bg"></div>
+
+    <img class="close_btn" src="http://www.yyfun001.com/res/htmlclassics/full/images/close_btn.png" title="关闭" onclick="closeImage()" />
+    
+  </body>
+</html>
+
+
+
+
+
+
+		
+
+
